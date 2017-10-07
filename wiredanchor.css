@@ -1,0 +1,40 @@
+.wiredanchor {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.wiredanchor:hover,
+.wiredanchor:focus,
+.wiredanchor:visited,
+.wiredanchor:active {
+  text-decoration: none;
+  color: #ff6f6f;
+}
+
+.wiredanchor:hover::before {
+  opacity: 0.3;
+}
+
+.wiredanchor:before {
+  content:'';
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  background-color: #ff6f6f;
+  width: 100%;
+  height: 82%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.wiredanchor:after {
+  content:'';
+  background-color: #ff6f6f;
+  opacity: 0.3;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+}
