@@ -1,0 +1,47 @@
+// SCSS for the main CSS file “wiredanchor.css
+
+// Vars.
+$color-primary: #ff6f6f;
+$color-charcoal: #333;
+
+// Main Styles.
+.wiredanchor {
+    text-decoration: none;
+    color: $color-charcoal;
+    position: relative;
+
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+    text-decoration: none;
+    color: $color-primary;
+  }
+
+  &:hover::before {
+    opacity: 0.3;
+  }
+
+  &:before {
+    content:'';
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    background-color: $color-primary;
+    width: 100%;
+    height: 82%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &:after {
+    content:'';
+    background-color: $color-primary;
+    opacity: 0.3;
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+  }
+} // .wiredanchor
