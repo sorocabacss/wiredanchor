@@ -1,22 +1,22 @@
-.wiredanchor {
+.wiredanchor-list--item {
   text-decoration: none;
   color: #333;
   position: relative;
 }
 
-.wiredanchor:hover,
-.wiredanchor:focus,
-.wiredanchor:visited,
-.wiredanchor:active {
+.wiredanchor-list--item:hover,
+.wiredanchor-list--item:focus,
+.wiredanchor-list--item:visited,
+.wiredanchor-list--item:active {
   text-decoration: none;
   color: #ff6f6f;
 }
 
-.wiredanchor:hover::before {
+.wiredanchor-list--item:hover::before {
   opacity: 0.3;
 }
 
-.wiredanchor:before {
+.wiredanchor-list--item:before {
   content:'';
   opacity: 0;
   transition: opacity 0.1s linear;
@@ -28,7 +28,7 @@
   top: 0;
 }
 
-.wiredanchor:after {
+.wiredanchor-list--item:after {
   content:'';
   background-color: #ff6f6f;
   opacity: 0.3;
