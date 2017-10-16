@@ -1,0 +1,37 @@
+$base-color = #333
+$highlight-color = #ff6f6f
+
+.wiredanchor
+  position: relative
+  text-decoration: none
+  color: $base-color
+
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active
+    text-decoration: none
+    color: $highlight-color
+
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    width: 100%
+
+  &::before
+    top: 0
+    opacity: 0
+    background-color: $highlight-color
+    height: 82%
+    transition: opacity .1s linear
+
+  &:hover::before
+    opacity: .3
+
+  &::after
+    bottom: -10%
+    opacity: .3
+    background-color: $highlight-color
+    height: 30%
